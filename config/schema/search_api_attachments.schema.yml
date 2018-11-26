@@ -44,6 +44,19 @@ search_api_attachments.admin_config:
     pdftotext_extractor_configuration:
       type: ignore
       label: 'Pdftotext extractor configuration'
+    docconv_extractor_configuration:
+      type: ignore
+      label: 'Docconv extractor configuration'
+    python_textract_extractor_configuration:
+      type: mapping
+      label: 'Python textract extractor configuration'
+      mapping:
+        python_path:
+          type: string
+          label: 'Path to python executable'
+        python_textract_script:
+          type: string
+          label: 'Full path to the python textract script'
     preserve_cache:
       type: boolean
       label: 'Preserve cached extractions across cache clears.'

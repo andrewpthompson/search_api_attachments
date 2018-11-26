@@ -310,7 +310,7 @@ class TextExtractorFormSettings extends ConfigFormBase {
       // Copy the source file to public directory.
       $source = drupal_get_path('module', 'search_api_attachments');
       $source .= '/data/search_api_attachments_test_extraction.pdf';
-      copy($source, $filepath);
+      $res = copy($source, $filepath);
       // Create the file object.
       $file = File::create(array(
             'uri' => $filepath,
